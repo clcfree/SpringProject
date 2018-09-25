@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.service.test.mapper.TestMapper">
+    <!-- 字段和属性映射 -->
+    <resultMap type="com.example.demo.service.test.model.TestEntity" id="TestEntity-Map">
+        <result property="id" column="id" />
+        <result property="test" column="test" />
+    </resultMap>
+
+    <!-- 新增 -->
+    <select id="selectTest"  parameterType="java.util.Map" resultMap="TestEntity-Map">
+      select * from test;
+    </select>
+</mapper>

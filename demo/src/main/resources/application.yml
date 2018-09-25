@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: demo
+  profiles:
+    active: dev
+
+server:
+  port: 10086
+
+mybatis:
+  type-aliases-package: com.example.demo.**.model
+  mapper-locations: classpath:sqlmap/**/*.xml
+  base-package: com.example.demo.**.mapper
+
+mapper:
+  mappers:
+     - tk.mybatis.mapper.common.Mapper
+     - tk.mybatis.mapper.common.special.InsertListMapper
+  not-empty: false
+  identity: MYSQL
+
