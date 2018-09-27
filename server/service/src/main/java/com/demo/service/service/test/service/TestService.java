@@ -1,8 +1,8 @@
-package com.example.demo.service.test.service;
+package com.demo.service.service.test.service;
 
-import com.example.demo.service.test.mapper.TestMapper;
-import com.example.demo.service.test.model.TestEntity;
-import com.example.demo.framework.base.service.CRUDService;
+import com.demo.service.service.test.mapper.TestMapper;
+import com.demo.service.service.test.model.TestEntity;
+import com.demo.service.framework.base.service.CRUDService;
 
 public interface TestService extends CRUDService <TestMapper,TestEntity>{
     void test();

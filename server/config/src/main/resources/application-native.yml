@@ -1,0 +1,18 @@
+server:
+  port: 11001
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+  client:
+    service-url:
+      defaultZone: http://localhost:11000/eureka/
+
+
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config

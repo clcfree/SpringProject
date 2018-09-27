@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: config
+  profiles:
+    active: native
+
+eureka:
+  instance:
+    instanceId: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}
+    hostname: localhost
+    prefer-ip-address: true

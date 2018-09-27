@@ -1,7 +1,7 @@
-package com.example.demo.framework.base.service.imp;
+package com.demo.service.framework.base.service.imp;
 
-import com.example.demo.framework.base.model.BaseEntity;
-import com.example.demo.framework.base.service.CRUDService;
+import com.demo.service.framework.base.model.BaseEntity;
+import com.demo.service.framework.base.service.CRUDService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

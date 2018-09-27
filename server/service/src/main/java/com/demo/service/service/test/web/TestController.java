@@ -1,9 +1,9 @@
-package com.example.demo.service.test.web;
+package com.demo.service.service.test.web;
 
-import com.example.demo.service.test.model.TestEntity;
-import com.example.demo.service.test.service.TestService;
-import com.example.demo.config.MybatisConfiguration;
-import com.example.demo.framework.base.web.AbstractBaseController;
+import com.demo.service.service.test.model.TestEntity;
+import com.demo.service.service.test.service.TestService;
+import com.demo.service.config.MybatisConfiguration;
+import com.demo.service.framework.base.web.AbstractBaseController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

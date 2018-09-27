@@ -1,6 +1,6 @@
-package com.example.demo.service.test.model;
+package com.demo.service.service.test.model;
 
-import com.example.demo.framework.base.model.BaseEntity;
+import com.demo.service.framework.base.model.BaseEntity;
 
 import javax.persistence.*;
 

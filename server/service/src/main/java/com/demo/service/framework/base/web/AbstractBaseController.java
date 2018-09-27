@@ -1,6 +1,6 @@
-package com.example.demo.framework.base.web;
+package com.demo.service.framework.base.web;
 
-import com.example.demo.framework.base.service.CRUDService;
+import com.demo.service.framework.base.service.CRUDService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

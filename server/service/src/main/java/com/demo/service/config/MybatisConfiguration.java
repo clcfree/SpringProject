@@ -1,4 +1,4 @@
-package com.example.demo.config;
+package com.demo.service.config;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -22,7 +22,7 @@ import java.io.IOException;
 @Configuration
 @EnableTransactionManagement
 @AutoConfigureAfter(DataSourceAutoConfiguration.class)
-@MapperScan(basePackages = "com.example.demo.**.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
+@MapperScan(basePackages = "com.demo.service.**.mapper", sqlSessionFactoryRef = "sqlSessionFactory")
 public class MybatisConfiguration {
     private static Log logger = LogFactory.getLog(MybatisConfiguration.class);
     @Value("${mybatis.type-aliases-package}")

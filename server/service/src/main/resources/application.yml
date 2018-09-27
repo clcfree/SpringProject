@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo
+    name: service
   profiles:
     active: dev
 
@@ -8,9 +8,9 @@ server:
   port: 10086
 
 mybatis:
-  type-aliases-package: com.example.demo.**.model
+  type-aliases-package: com.demo.service.**.model
   mapper-locations: classpath:sqlmap/**/*.xml
-  base-package: com.example.demo.**.mapper
+  base-package: com.demo.service.**.mapper
 
 mapper:
   mappers:

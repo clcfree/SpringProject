@@ -1,6 +1,6 @@
-package com.example.demo.framework.base.mapper;
+package com.demo.service.framework.base.mapper;
 
-import com.example.demo.framework.base.model.BaseEntity;
+import com.demo.service.framework.base.model.BaseEntity;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.example.demo.service.test.mapper;
+package com.demo.service.service.test.mapper;
 
-import com.example.demo.service.test.model.TestEntity;
+import com.demo.service.service.test.model.TestEntity;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
