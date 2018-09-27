@@ -5,7 +5,7 @@ spring:
     active: dev
 
 server:
-  port: 10086
+  port: 11002
 
 mybatis:
   type-aliases-package: com.demo.service.**.model
