@@ -1,4 +1,4 @@
-package com.demo.service.framework.base.model;
+package com.demo.service.framework.model;
 
 import java.io.Serializable;
 
