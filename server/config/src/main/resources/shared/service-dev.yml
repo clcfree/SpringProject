@@ -3,7 +3,7 @@ spring:
     name: service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/ppa?useUnicode=true&characterEncoding=utf8&useSSL=false&&serverTimezone=Hongkong
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&useSSL=false&&serverTimezone=Hongkong
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -26,8 +26,8 @@ spring:
         reset-enable: false
 
 mybatis-plus:
-  type-aliases-package: com.demo.service.**.model
-  mapper-locations: classpath:sqlmap/**/*.xml
+  type-aliases-package: com.demo.service.**.entity
+  mapper-locations: classpath:mapper/**/*.xml
 
 
 server:
