@@ -29,6 +29,8 @@
 		<druid.version>1.1.10</druid.version>
 		<mysql-connector-java.version>8.0.11</mysql-connector-java.version>
 		<logback.version>1.2.3</logback.version>
+		<slf4j-api.version>1.7.25</slf4j-api.version>
+		<jcl-over-slf4j.version>1.7.25</jcl-over-slf4j.version>
 	</properties>
 
 	<dependencyManagement>
@@ -43,6 +45,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql-connector-java.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
@@ -61,13 +64,14 @@
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
-			<version>1.7.25</version>
+			<version>{slf4j-api.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
-			<version>1.7.25</version>
+			<version>{jcl-over-slf4j.version}</version>
 		</dependency>
+
 	</dependencies>
 	</dependencyManagement>
 
