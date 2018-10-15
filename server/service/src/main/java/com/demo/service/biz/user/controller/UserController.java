@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018-10-11
  */
 @RestController
-@RequestMapping("/user/user")
+@RequestMapping("user")
 public class UserController {
     @Autowired
     IUserService userService;
 
     @GetMapping("test")
-    public void test(){
+    public String test(){
         User user = userService.getById(1);
-        return;
+        return "test";
     }
 }

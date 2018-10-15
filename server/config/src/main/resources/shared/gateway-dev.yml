@@ -12,5 +12,16 @@ eureka:
   client:
     registerWithEureka: true
     fetchRegistry: true
-    service-url:
+    serviceUrl:
       defaultZone: http://localhost:11000/eureka/
+
+zuul:
+  routes:
+    auth:
+      path: /auth/**
+      serviceId: auth
+      stripPrefix: true
+      customSensitiveHeaders: true  #http://blog.didispace.com/spring-cloud-zuul-cookie-redirect/ zuul授权码跳转问题
+    service:
+      path: /service/**
+      serviceId: service
