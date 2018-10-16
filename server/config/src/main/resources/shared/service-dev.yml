@@ -42,3 +42,15 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:11000/eureka/
+
+security:
+  basic:
+    enabled: false
+  oauth2:
+    client:
+      clientId: SampleClientId
+      clientSecret: secret
+      accessTokenUri: http://localhost:11005/auth/oauth/token
+      userAuthorizationUri: http://localhost:11005/auth/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:11002/user/test
