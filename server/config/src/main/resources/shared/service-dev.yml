@@ -47,10 +47,8 @@ security:
   basic:
     enabled: false
   oauth2:
-    client:
-      clientId: SampleClientId
-      clientSecret: secret
-      accessTokenUri: http://localhost:11005/auth/oauth/token
-      userAuthorizationUri: http://localhost:11005/auth/oauth/authorize
+#    client:
+#      accessTokenUri: http://localhost:11005/oauth/token
+#      userAuthorizationUri: http://localhost:11005/oauth/authorize
     resource:
-      userInfoUri: http://localhost:11002/user/test
+      userInfoUri: http://localhost:11005/user

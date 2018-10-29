@@ -14,3 +14,8 @@ eureka:
     fetchRegistry: true
     service-url:
       defaultZone: http://localhost:11000/eureka/
+
+security:
+  oauth2:
+    resource:
+      filter-order: 3

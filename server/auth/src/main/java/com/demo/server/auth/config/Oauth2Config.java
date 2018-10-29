@@ -14,6 +14,8 @@ import org.springframework.security.oauth2.provider.token.store.InMemoryTokenSto
 
 @Configuration
 public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
+    @Autowired
+    private UserDetailsServiceImpl userDetailsService;
 /*    @Autowired
     private AuthenticationManager authenticationManager;
 
@@ -51,22 +53,22 @@ public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer.tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");
+                .checkTokenAccess("isAuthenticated()")
+        ;
     }
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("SampleClientId")
-                .secret("secret")
-                .authorizedGrantTypes("authorization_code")
-                .scopes("user_info")
-                .autoApprove(true) ;
+                .withClient("admin")
+                .secret("{noop}admin")
+                .authorizedGrantTypes("password", "refresh_token")
+                .scopes("read", "write");
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(authenticationManager);
+        endpoints.authenticationManager(authenticationManager).tokenStore(memoryTokenStore());
     }
 
     @Bean
