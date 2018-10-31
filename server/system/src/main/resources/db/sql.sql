@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS `sys_role`;
-CREATE TABLE `csc_sys_role` (
-  `id` bigint(20) NOT NULL '角色id',
+CREATE TABLE `sys_role` (
+  `id` BIGINT(20) NOT NULL COMMENT '角色id',
   `code` varchar(255) DEFAULT NULL COMMENT '角色编码',
   `name` varchar(255) DEFAULT NULL COMMENT '角色名称',
-  `type` tinyint(2) unsigned DEFAULT '1' COMMENT '角色类型，1.系统角色',
+  `type` tinyint(4) unsigned DEFAULT '1' COMMENT '角色类型，1.系统角色',
   `is_enable` tinyint(1) unsigned DEFAULT '1' COMMENT '状态，1:启用，0:禁用，默认1',
   `description` varchar(255) DEFAULT NULL COMMENT '描述',
   `create_time` datetime DEFAULT NULL COMMENT '创建时间',
-  `create_id` int(20) unsigned DEFAULT NULL COMMENT '创建用户id',
+  `create_id` bigint(20) unsigned DEFAULT NULL COMMENT '创建用户id',
   `create_name` varchar(255) DEFAULT NULL COMMENT '创建用户名',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   `update_id` bigint(20) unsigned DEFAULT NULL COMMENT '更新用户id',
@@ -58,4 +58,18 @@ CREATE TABLE `sys_auth` (
   `update_name` varchar(255) DEFAULT NULL COMMENT '更新用户名',
   `update_time` datetime DEFAULT NULL COMMENT '更新时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限';;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='权限';
+
+DROP TABLE IF EXISTS `sys_role_user`;
+CREATE TABLE `sys_role_user` (
+  `user_id` bigint(20) not NULL COMMENT '用户id',
+  `role_id` bigint(20) not NULL COMMENT '角色id',
+  PRIMARY KEY (`user_id`,`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统用户角色';
+
+DROP TABLE IF EXISTS `sys_role_auth`;
+CREATE TABLE `sys_role_auth` (
+  `auth_id` bigint(20) not NULL COMMENT '权限id',
+  `role_id` bigint(20) not NULL COMMENT '角色id',
+  PRIMARY KEY (`auth_id`,`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统角色权限';
