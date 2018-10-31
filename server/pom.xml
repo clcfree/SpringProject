@@ -20,6 +20,8 @@
 		<module>registry</module>
 		<module>common</module>
 		<module>gateway</module>
+		<module>system</module>
+		<module>config</module>
 		<module>auth</module>
 	</modules>
 
