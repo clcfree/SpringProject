@@ -45,8 +45,8 @@ DROP TABLE IF EXISTS `sys_auth`;
 CREATE TABLE `sys_auth` (
   `id` bigint(20) NOT NULL  COMMENT '权限id',
   `parent_id` bigint(20) NOT NULL  COMMENT '父节点id',
-  `authority_code` varchar(50) DEFAULT NULL,
-  `authority_name` varchar(200) DEFAULT NULL,
+  `auth_code` varchar(50) DEFAULT NULL,
+  `auth_name` varchar(200) DEFAULT NULL,
   `icon` varchar(50) DEFAULT NULL,
   `url` varchar(200) DEFAULT NULL,
   `type` tinyint(4) NOT NULL DEFAULT '0' COMMENT '0-菜单 1-按钮',
@@ -73,3 +73,20 @@ CREATE TABLE `sys_role_auth` (
   `role_id` bigint(20) not NULL COMMENT '角色id',
   PRIMARY KEY (`auth_id`,`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='系统角色权限';
+
+DROP TABLE IF EXISTS `oauth_client_detail`;
+CREATE TABLE `oauth_client_detail` (
+  `id` bigint(20) NOT NULL,
+  `access_token_validity` bigint(20) DEFAULT NULL,
+  `additional_information` varchar(255) DEFAULT NULL,
+  `authorities` varchar(255) DEFAULT NULL,
+  `is_auto_approve`  boolean DEFAULT NULL,
+  `client_id` varchar(255) DEFAULT NULL,
+  `client_secret` varchar(255) DEFAULT NULL,
+  `authorized_grant_types` varchar(255) DEFAULT NULL,
+  `web_server_redirect_uri` varchar(255) DEFAULT NULL,
+  `refresh_token_validity` bigint(20) DEFAULT NULL,
+  `resource_ids` varchar(255) DEFAULT NULL,
+  `scope` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
