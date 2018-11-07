@@ -41,15 +41,17 @@ public class CodeAutoGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-/*        String projectPath = System.getProperty("E://project/temp");*/
-        gc.setOutputDir( "E://project/temp/src/main/java");
+/*        String projectPath = System.getProperty("user.dir");
+        gc.setOutputDir(projectPath + "/src/main/java");*/
+        String projectPath = "F:/spring_project/server/system";
+        gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("cuiluchuan");
         gc.setOpen(false);
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/demo?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8");
+        dsc.setUrl("jdbc:mysql://localhost:3306/server?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8");
         // dsc.setSchemaName("public");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
@@ -59,7 +61,7 @@ public class CodeAutoGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setModuleName(scanner("模块名"));
-        pc.setParent("com.demo.service.biz");
+        pc.setParent("com.demo.server.system");
         mpg.setPackageInfo(pc);
 
         // 自定义配置
@@ -74,7 +76,7 @@ public class CodeAutoGenerator {
             @Override
             public String outputFile(TableInfo tableInfo) {
                 // 自定义输入文件名称
-                return "E://project/temp" + "/src/main/resources/mapper/" + pc.getModuleName()
+                return "F:/spring_project/server/system" + "/src/main/resources/mapper/" + pc.getModuleName()
                         + "/" + tableInfo.getEntityName() + "Mapper" + StringPool.DOT_XML;
             }
         });
@@ -86,10 +88,10 @@ public class CodeAutoGenerator {
         StrategyConfig strategy = new StrategyConfig();
         strategy.setNaming(NamingStrategy.underline_to_camel);
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);
-        strategy.setSuperEntityClass("com.demo.service.biz.BaseEntity");
+        strategy.setSuperEntityClass("com.demo.service.system.base.BaseEntity");
         strategy.setEntityLombokModel(true);
         strategy.setRestControllerStyle(true);
-        strategy.setSuperControllerClass("com.demo.service.biz.BaseController");
+        strategy.setSuperControllerClass("com.demo.service.system.base.BaseController");
         strategy.setInclude(scanner("表名"));
         strategy.setSuperEntityColumns("id");
         strategy.setControllerMappingHyphenStyle(true);
