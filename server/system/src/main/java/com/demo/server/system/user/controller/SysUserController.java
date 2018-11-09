@@ -1,10 +1,10 @@
 package com.demo.server.system.user.controller;
 
 
-import com.demo.server.system.base.BaseController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+import com.demo.server.system.base.BaseController;
 
 /**
  * <p>
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author cuiluchuan
- * @since 2018-11-07
+ * @since 2018-11-10
  */
 @RestController
 @RequestMapping("/user/sys-user")

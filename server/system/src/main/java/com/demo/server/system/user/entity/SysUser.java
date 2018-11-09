@@ -1,7 +1,6 @@
 package com.demo.server.system.user.entity;
 
 import java.time.LocalDateTime;
-
 import com.demo.server.system.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,7 +12,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author cuiluchuan
- * @since 2018-11-07
+ * @since 2018-11-10
  */
 @Data
 @EqualsAndHashCode(callSuper = true)

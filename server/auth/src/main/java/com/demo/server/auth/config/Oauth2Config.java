@@ -1,5 +1,6 @@
 package com.demo.server.auth.config;
 
+import com.demo.server.auth.service.CustomerClientDetailsService;
 import com.demo.server.auth.service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +29,7 @@ public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private AuthenticationManager authenticationManager;
     @Autowired
-    private CustomClientDetailsService customClientDetailsService;
+    private CustomerClientDetailsService customClientDetailsService;
 
 
     @Autowired
