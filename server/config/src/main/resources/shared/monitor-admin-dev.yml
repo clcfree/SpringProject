@@ -1,9 +1,9 @@
 spring:
   application:
-    name: auth
+    name: monitor-admin
 
 server:
-  port: 11005
+  port: 11006
 
 eureka:
   instance:
@@ -14,8 +14,3 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://localhost:11000/eureka/
-
-security:
-  oauth2:
-    resource:
-      filter-order: 3

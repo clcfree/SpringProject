@@ -23,6 +23,7 @@
 		<module>system</module>
 		<module>config</module>
 		<module>auth</module>
+		<module>monitor-admin</module>
 	</modules>
 
 	<properties>
